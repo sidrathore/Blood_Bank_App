@@ -1,10 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:mybloodbank_app/screen/moblie_number_page.dart';
+import 'package:mybloodbank_app/screen/on_bording_page1.dart';
+import 'package:mybloodbank_app/screen/on_bording_page2.dart';
 import 'package:mybloodbank_app/screen/splash_screen.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: SplashScreen(),
-  ));
+    theme: ThemeData(
+      primaryColor: Colors.red,
+      primarySwatch: Colors.red,
+     
+      ),
+       // home: SplashScreen(),
+    initialRoute: '/',
+    routes: {
+      '/':(context) => SplashScreen(),
+      '/onboarding1':(context) => OnBoarding1(),
+      '/onboarding2':(context) => OnBoarding2(),
+      '/mobileLogin':(context) => MobileLogin()
+    },
+    ),
+   
+  );
 }
 
 class MyApp extends StatelessWidget {
