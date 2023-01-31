@@ -10,12 +10,16 @@ class OnBoarding2 extends StatelessWidget {
         child: Container(
           width: 200,
           height: 200,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(child: Image.asset('assets/images/blood-bag 1.png')),
-              
-            ],
+          child: InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, '/mobileLogin');
+            },
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(child: Image.asset('assets/images/blood-bag 1.png')),
+              ],
+            ),
           ),
         ),
       ),
